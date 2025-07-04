@@ -1,21 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;500;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', 'Segoe UI', 'Malgun Gothic', Arial, sans-serif;
-  background: linear-gradient(135deg, #e0e7ff 0%, #f7f7fa 100%);
-  color: #222;
+  font-family: 'Gugi', 'Malgun Gothic', 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #fff7e6 0%, #ffe5e5 40%, #e6eaff 100%);
+  color: #3a1a00;
   min-height: 100vh;
+  /* 전통 구름 패턴 느낌의 배경 효과 */
+  background-image:
+    repeating-radial-gradient(circle at 20% 40%, #fffbe6 0 10px, transparent 12px 40px),
+    repeating-radial-gradient(circle at 80% 60%, #ffe5e5 0 12px, transparent 14px 44px);
 }
 
 .container {
-  max-width: 420px;
+  max-width: 440px;
   margin: 60px auto;
-  background: rgba(255,255,255,0.95);
-  border-radius: 22px;
-  box-shadow: 0 8px 32px rgba(123,97,255,0.13), 0 1.5px 8px rgba(90,159,255,0.08);
-  padding: 38px 28px 28px 28px;
+  background: rgba(255,255,255,0.97);
+  border-radius: 24px;
+  border: 3px solid #b71c1c;
+  box-shadow: 0 8px 32px rgba(183,28,28,0.13), 0 1.5px 8px rgba(255,193,7,0.10);
+  padding: 40px 30px 30px 30px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -23,24 +28,26 @@ body {
   transition: box-shadow 0.3s;
 }
 .container:hover {
-  box-shadow: 0 12px 40px rgba(123,97,255,0.18), 0 2px 12px rgba(90,159,255,0.12);
+  box-shadow: 0 12px 40px rgba(183,28,28,0.18), 0 2px 12px rgba(255,193,7,0.13);
 }
 
 h1 {
   text-align: center;
-  font-size: 2.3rem;
+  font-size: 2.4rem;
   margin-bottom: 8px;
   letter-spacing: 2px;
-  font-weight: 700;
-  color: #7b61ff;
-  text-shadow: 0 2px 8px #e0e7ff;
+  font-family: 'Gugi', 'Malgun Gothic', serif;
+  font-weight: 400;
+  color: #b71c1c;
+  text-shadow: 0 2px 8px #ffe5e5, 0 0 2px #ffd600;
 }
 .subtitle {
   text-align: center;
-  font-size: 1.05rem;
-  color: #5a9fff;
-  margin-bottom: 24px;
-  font-weight: 500;
+  font-size: 1.1rem;
+  color: #ff9800;
+  margin-bottom: 26px;
+  font-family: 'Gugi', 'Malgun Gothic', serif;
+  font-weight: 400;
   letter-spacing: 1px;
 }
 
@@ -48,98 +55,109 @@ label {
   margin-top: 16px;
   margin-bottom: 6px;
   font-weight: 500;
-  color: #7b61ff;
-  font-size: 1.02rem;
+  color: #b71c1c;
+  font-size: 1.05rem;
   letter-spacing: 0.5px;
+  font-family: 'Gugi', 'Malgun Gothic', serif;
 }
 
 input[type="text"],
-input[type="date"] {
+.birth-selects select {
   padding: 12px 14px;
-  border: 1.5px solid #e0e7ff;
+  border: 2px solid #b71c1c;
   border-radius: 12px;
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   margin-bottom: 16px;
   outline: none;
   transition: border 0.2s, box-shadow 0.2s;
-  background: #f7f7fa;
-  box-shadow: 0 1px 4px rgba(123,97,255,0.04);
+  background: #fffbe6;
+  box-shadow: 0 1px 4px rgba(183,28,28,0.06);
+  font-family: 'Gugi', 'Malgun Gothic', serif;
 }
 input[type="text"]:focus,
-input[type="date"]:focus {
-  border: 1.5px solid #7b61ff;
-  box-shadow: 0 2px 8px rgba(123,97,255,0.10);
+.birth-selects select:focus {
+  border: 2px solid #ffd600;
+  box-shadow: 0 2px 8px rgba(255,193,7,0.13);
 }
 
 button {
-  background: linear-gradient(90deg, #7b61ff 0%, #5a9fff 100%);
-  color: #fff;
-  border: none;
-  border-radius: 12px;
-  padding: 14px;
-  font-size: 1.15rem;
+  background: linear-gradient(90deg, #b71c1c 0%, #ffd600 100%);
+  color: #fffbe6;
+  border: 2.5px solid #ffd600;
+  border-radius: 14px;
+  padding: 15px;
+  font-size: 1.18rem;
+  font-family: 'Gugi', 'Malgun Gothic', serif;
   font-weight: bold;
   cursor: pointer;
   margin-top: 10px;
   margin-bottom: 8px;
-  transition: background 0.2s, transform 0.15s;
-  box-shadow: 0 2px 8px rgba(123,97,255,0.08);
-  letter-spacing: 1px;
+  transition: background 0.2s, transform 0.15s, border 0.2s;
+  box-shadow: 0 2px 8px rgba(183,28,28,0.10);
+  letter-spacing: 1.5px;
+  text-shadow: 0 1px 4px #b71c1c;
 }
 button:hover {
-  background: linear-gradient(90deg, #5a9fff 0%, #7b61ff 100%);
+  background: linear-gradient(90deg, #ffd600 0%, #b71c1c 100%);
+  color: #b71c1c;
+  border: 2.5px solid #b71c1c;
   transform: translateY(-2px) scale(1.03);
 }
 
-.result-box {
-  margin-top: 32px;
-  min-height: 80px;
-  background: linear-gradient(120deg, #f3f3fa 60%, #e0e7ff 100%);
-  border-radius: 14px;
-  padding: 22px 16px;
-  font-size: 1.13rem;
-  color: #333;
-  box-shadow: 0 2px 12px rgba(123,97,255,0.06);
-  word-break: keep-all;
-  line-height: 1.7;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s, transform 0.5s;
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-}
-.result-box.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.result-emoji {
-  font-size: 2.1rem;
-  margin-right: 8px;
-  flex-shrink: 0;
-}
-
 .form-block {
-  background: rgba(245, 247, 255, 0.85);
-  border-radius: 14px;
-  box-shadow: 0 2px 8px rgba(123,97,255,0.04);
+  background: rgba(255, 244, 229, 0.92);
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(183,28,28,0.04);
   padding: 18px 14px 12px 14px;
   margin-bottom: 18px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   transition: box-shadow 0.2s, background 0.2s;
+  border: 1.5px solid #ffd600;
 }
 .form-block:last-child {
-  background: linear-gradient(90deg, #e0e7ff 0%, #f3f3fa 100%);
-  box-shadow: 0 2px 12px rgba(90,159,255,0.08);
+  background: linear-gradient(90deg, #fffbe6 0%, #ffe5e5 100%);
+  box-shadow: 0 2px 12px rgba(255,193,7,0.08);
   padding: 16px 14px 10px 14px;
   margin-bottom: 0;
   align-items: stretch;
+  border: 2px solid #b71c1c;
 }
 .form-block:last-child button {
   width: 100%;
+}
+
+.result-box {
+  margin-top: 32px;
+  min-height: 90px;
+  background: repeating-linear-gradient(135deg, #fffbe6 0 20px, #ffd600 22px 40px);
+  border-radius: 18px;
+  padding: 28px 18px;
+  font-size: 1.18rem;
+  color: #b71c1c;
+  box-shadow: 0 2px 16px rgba(183,28,28,0.10);
+  word-break: keep-all;
+  line-height: 1.8;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  border: 3px double #b71c1c;
+  font-family: 'Gugi', 'Malgun Gothic', serif;
+  position: relative;
+}
+.result-box.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.result-emoji {
+  font-size: 2.2rem;
+  margin-right: 10px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 1px 2px #ffd600);
 }
 
 .birth-selects {
@@ -149,27 +167,13 @@ button:hover {
   margin-bottom: 0;
 }
 .birth-label {
-  font-size: 1.02rem;
-  color: #7b61ff;
+  font-size: 1.05rem;
+  color: #b71c1c;
   margin: 0 2px 0 0;
   font-weight: 500;
+  font-family: 'Gugi', 'Malgun Gothic', serif;
 }
-.birth-selects select {
-  padding: 10px 12px;
-  border: 1.5px solid #e0e7ff;
-  border-radius: 10px;
-  font-size: 1.05rem;
-  background: #f7f7fa;
-  margin-right: 2px;
-  outline: none;
-  transition: border 0.2s, box-shadow 0.2s;
-  box-shadow: 0 1px 4px rgba(123,97,255,0.04);
-  appearance: none;
-}
-.birth-selects select:focus {
-  border: 1.5px solid #7b61ff;
-  box-shadow: 0 2px 8px rgba(123,97,255,0.10);
-}
+
 @media (max-width: 600px) {
   .container {
     max-width: 98vw;
@@ -179,7 +183,7 @@ button:hover {
     font-size: 1.5rem;
   }
   .result-box {
-    font-size: 1rem;
+    font-size: 1.05rem;
     padding: 16px 8px;
   }
   .form-block {
