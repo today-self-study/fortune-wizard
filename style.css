@@ -1,54 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Nanum+Myeongjo:wght@700&family=Noto+Sans+KR:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&family=Noto+Sans+KR:wght@400;700&display=swap');
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Noto Sans KR', 'Malgun Gothic', 'Nanum Gothic', Arial, sans-serif;
-  background: linear-gradient(135deg, #fff7e6 0%, #ffe5e5 40%, #e6eaff 100%);
+  background: linear-gradient(135deg, #f9f6f2 0%, #fbeee6 100%);
   color: #3a1a00;
   min-height: 100vh;
-  /* 전통 구름 패턴 느낌의 배경 효과 */
-  background-image:
-    repeating-radial-gradient(circle at 20% 40%, #fffbe6 0 10px, transparent 12px 40px),
-    repeating-radial-gradient(circle at 80% 60%, #ffe5e5 0 12px, transparent 14px 44px);
 }
 
 .container {
-  max-width: 440px;
+  max-width: 420px;
   margin: 60px auto;
-  background: rgba(255,255,255,0.97);
-  border-radius: 24px;
-  border: 3px solid #b71c1c;
-  box-shadow: 0 8px 32px rgba(183,28,28,0.13), 0 1.5px 8px rgba(255,193,7,0.10);
-  padding: 40px 30px 30px 30px;
+  background: #fff;
+  border-radius: 20px;
+  border: 2px solid #b71c1c;
+  box-shadow: 0 4px 24px rgba(183,28,28,0.07);
+  padding: 38px 28px 28px 28px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   position: relative;
-  transition: box-shadow 0.3s;
-}
-.container:hover {
-  box-shadow: 0 12px 40px rgba(183,28,28,0.18), 0 2px 12px rgba(255,193,7,0.13);
 }
 
 h1 {
   text-align: center;
-  font-size: 2.4rem;
+  font-size: 2.1rem;
   margin-bottom: 8px;
-  letter-spacing: 2px;
-  font-family: 'Gugi', 'Nanum Myeongjo', 'Malgun Gothic', serif;
-  font-weight: 400;
+  letter-spacing: 1.5px;
+  font-family: 'Nanum Myeongjo', 'Malgun Gothic', serif;
+  font-weight: 700;
   color: #b71c1c;
-  text-shadow: 0 2px 8px #ffe5e5, 0 0 2px #ffd600;
 }
 .subtitle {
   text-align: center;
-  font-size: 1.1rem;
-  color: #ff9800;
-  margin-bottom: 26px;
-  font-family: 'Nanum Myeongjo', 'Gugi', 'Malgun Gothic', serif;
+  font-size: 1.05rem;
+  color: #b71c1c;
+  margin-bottom: 24px;
+  font-family: 'Nanum Myeongjo', 'Malgun Gothic', serif;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 label {
@@ -56,96 +47,93 @@ label {
   margin-bottom: 6px;
   font-weight: 700;
   color: #b71c1c;
-  font-size: 1.05rem;
-  letter-spacing: 0.5px;
-  font-family: 'Nanum Myeongjo', 'Gugi', 'Malgun Gothic', serif;
+  font-size: 1.01rem;
+  letter-spacing: 0.3px;
+  font-family: 'Nanum Myeongjo', 'Malgun Gothic', serif;
 }
 
 input[type="text"],
 .birth-selects select {
   padding: 12px 14px;
-  border: 2px solid #b71c1c;
-  border-radius: 12px;
-  font-size: 1.08rem;
+  border: 1.5px solid #b71c1c;
+  border-radius: 10px;
+  font-size: 1.05rem;
   margin-bottom: 16px;
   outline: none;
   transition: border 0.2s, box-shadow 0.2s;
-  background: #fffbe6;
-  box-shadow: 0 1px 4px rgba(183,28,28,0.06);
+  background: #f9f6f2;
+  box-shadow: 0 1px 4px rgba(183,28,28,0.03);
   font-family: 'Noto Sans KR', 'Malgun Gothic', 'Nanum Gothic', Arial, sans-serif;
 }
 input[type="text"]:focus,
 .birth-selects select:focus {
-  border: 2px solid #ffd600;
-  box-shadow: 0 2px 8px rgba(255,193,7,0.13);
+  border: 1.5px solid #b71c1c;
+  box-shadow: 0 2px 8px rgba(183,28,28,0.08);
 }
 
 button {
-  background: linear-gradient(90deg, #b71c1c 0%, #ffd600 100%);
-  color: #fffbe6;
-  border: 2.5px solid #ffd600;
-  border-radius: 14px;
-  padding: 15px;
-  font-size: 1.18rem;
+  background: #b71c1c;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 1.08rem;
   font-family: 'Noto Sans KR', 'Malgun Gothic', 'Nanum Gothic', Arial, sans-serif;
   font-weight: bold;
   cursor: pointer;
   margin-top: 10px;
   margin-bottom: 8px;
-  transition: background 0.2s, transform 0.15s, border 0.2s;
-  box-shadow: 0 2px 8px rgba(183,28,28,0.10);
-  letter-spacing: 1.5px;
-  text-shadow: 0 1px 4px #b71c1c;
+  transition: background 0.2s, transform 0.15s;
+  box-shadow: 0 2px 8px rgba(183,28,28,0.06);
+  letter-spacing: 1px;
 }
 button:hover {
-  background: linear-gradient(90deg, #ffd600 0%, #b71c1c 100%);
-  color: #b71c1c;
-  border: 2.5px solid #b71c1c;
+  background: #a31515;
   transform: translateY(-2px) scale(1.03);
 }
 
 .form-block {
-  background: rgba(255, 244, 229, 0.92);
-  border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(183,28,28,0.04);
-  padding: 18px 14px 12px 14px;
-  margin-bottom: 18px;
+  background: #f9f6f2;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(183,28,28,0.03);
+  padding: 16px 12px 10px 12px;
+  margin-bottom: 16px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   transition: box-shadow 0.2s, background 0.2s;
-  border: 1.5px solid #ffd600;
+  border: 1px solid #f3e0d6;
 }
 .form-block:last-child {
-  background: linear-gradient(90deg, #fffbe6 0%, #ffe5e5 100%);
-  box-shadow: 0 2px 12px rgba(255,193,7,0.08);
-  padding: 16px 14px 10px 14px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(183,28,28,0.04);
+  padding: 14px 12px 8px 12px;
   margin-bottom: 0;
   align-items: stretch;
-  border: 2px solid #b71c1c;
+  border: none;
 }
 .form-block:last-child button {
   width: 100%;
 }
 
 .result-box {
-  margin-top: 32px;
-  min-height: 90px;
-  background: repeating-linear-gradient(135deg, #fffbe6 0 20px, #ffd600 22px 40px);
-  border-radius: 18px;
-  padding: 28px 18px;
-  font-size: 1.18rem;
+  margin-top: 28px;
+  min-height: 70px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 22px 14px;
+  font-size: 1.08rem;
   color: #b71c1c;
-  box-shadow: 0 2px 16px rgba(183,28,28,0.10);
+  box-shadow: 0 2px 8px rgba(183,28,28,0.06);
   word-break: keep-all;
-  line-height: 1.8;
+  line-height: 1.7;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s, transform 0.5s;
   display: flex;
   align-items: flex-start;
-  gap: 16px;
-  border: 3px double #b71c1c;
+  gap: 10px;
+  border: 1.5px solid #b71c1c;
   font-family: 'Noto Sans KR', 'Malgun Gothic', 'Nanum Gothic', Arial, sans-serif;
   position: relative;
 }
@@ -154,10 +142,9 @@ button:hover {
   transform: translateY(0);
 }
 .result-emoji {
-  font-size: 2.2rem;
-  margin-right: 10px;
+  font-size: 2rem;
+  margin-right: 8px;
   flex-shrink: 0;
-  filter: drop-shadow(0 1px 2px #ffd600);
 }
 
 .birth-selects {
@@ -167,31 +154,31 @@ button:hover {
   margin-bottom: 0;
 }
 .birth-label {
-  font-size: 1.05rem;
+  font-size: 1.01rem;
   color: #b71c1c;
   margin: 0 2px 0 0;
-  font-weight: 500;
-  font-family: 'Nanum Myeongjo', 'Gugi', 'Malgun Gothic', serif;
+  font-weight: 700;
+  font-family: 'Nanum Myeongjo', 'Malgun Gothic', serif;
 }
 
 @media (max-width: 600px) {
   .container {
     max-width: 98vw;
-    padding: 18vw 4vw 8vw 4vw;
+    padding: 12vw 3vw 6vw 3vw;
   }
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   .result-box {
-    font-size: 1.05rem;
-    padding: 16px 8px;
+    font-size: 0.98rem;
+    padding: 12px 6px;
   }
   .form-block {
-    padding: 10vw 3vw 6vw 3vw;
-    margin-bottom: 4vw;
+    padding: 6vw 2vw 3vw 2vw;
+    margin-bottom: 3vw;
   }
   .form-block:last-child {
-    padding: 8vw 3vw 4vw 3vw;
+    padding: 4vw 2vw 2vw 2vw;
   }
   .birth-selects {
     gap: 2vw;
