@@ -136,7 +136,10 @@ button:hover {
   box-shadow: 0 2px 12px rgba(90,159,255,0.08);
   padding: 16px 14px 10px 14px;
   margin-bottom: 0;
-  align-items: center;
+  align-items: stretch;
+}
+.form-block:last-child button {
+  width: 100%;
 }
 
 @media (max-width: 600px) {
