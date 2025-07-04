@@ -11,11 +11,17 @@
     <h1>🧙‍♂️ 운세 마법사</h1>
     <div class="subtitle">오늘의 운세를 받아보세요!</div>
     <form id="fortune-form">
-      <label for="name">이름</label>
-      <input type="text" id="name" name="name" placeholder="이름을 입력하세요" required />
-      <label for="birth">생년월일</label>
-      <input type="date" id="birth" name="birth" required />
-      <button type="submit" id="get-fortune">🔮 운세 보기</button>
+      <div class="form-block">
+        <label for="name">이름</label>
+        <input type="text" id="name" name="name" placeholder="이름을 입력하세요" required />
+      </div>
+      <div class="form-block">
+        <label for="birth">생년월일</label>
+        <input type="date" id="birth" name="birth" required />
+      </div>
+      <div class="form-block">
+        <button type="submit" id="get-fortune">🔮 운세 보기</button>
+      </div>
     </form>
     <div id="result" class="result-box"></div>
   </section>
