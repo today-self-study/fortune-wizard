@@ -73,8 +73,16 @@ input[type="text"],
 }
 input[type="text"]:focus,
 .birth-selects select:focus {
-  border: 1.5px solid #b71c1c;
-  box-shadow: 0 2px 8px rgba(183,28,28,0.08);
+  border: 2px solid #d32f2f;
+  box-shadow: 0 0 0 2px #fbeee6, 0 0 0 4px #d32f2f33;
+  background: #fff;
+  transition: border 0.2s, box-shadow 0.2s, background 0.2s;
+}
+.form-block:focus-within label {
+  color: #d32f2f;
+  font-weight: 900;
+  text-shadow: 0 1px 0 #fbeee6;
+  transition: color 0.2s, text-shadow 0.2s, font-weight 0.2s;
 }
 
 button {
