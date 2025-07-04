@@ -7,7 +7,17 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- 여기에 UI가 추가될 예정입니다. -->
+  <section class="container">
+    <h1>운세 마법사</h1>
+    <form id="fortune-form">
+      <label for="name">이름</label>
+      <input type="text" id="name" name="name" placeholder="이름을 입력하세요" required />
+      <label for="birth">생년월일</label>
+      <input type="date" id="birth" name="birth" required />
+      <button type="submit" id="get-fortune">운세 보기</button>
+    </form>
+    <div id="result" class="result-box"></div>
+  </section>
   <script src="script.js"></script>
 </body>
 </html> 
