@@ -4,6 +4,34 @@ document.addEventListener('DOMContentLoaded', function() {
   const form = document.getElementById('fortune-form');
   const resultBox = document.getElementById('result');
 
+  // 생년월일 select box 동적 생성
+  const yearSelect = document.getElementById('birth-year');
+  const monthSelect = document.getElementById('birth-month');
+  const daySelect = document.getElementById('birth-day');
+  const now = new Date();
+  const thisYear = now.getFullYear();
+  for (let y = thisYear; y >= 1900; y--) {
+    yearSelect.innerHTML += `<option value="${y}">${y}</option>`;
+  }
+  for (let m = 1; m <= 12; m++) {
+    monthSelect.innerHTML += `<option value="${String(m).padStart(2, '0')}">${m}</option>`;
+  }
+  function updateDays() {
+    const year = parseInt(yearSelect.value);
+    const month = parseInt(monthSelect.value);
+    const daysInMonth = new Date(year, month, 0).getDate();
+    daySelect.innerHTML = '';
+    for (let d = 1; d <= daysInMonth; d++) {
+      daySelect.innerHTML += `<option value="${String(d).padStart(2, '0')}">${d}</option>`;
+    }
+  }
+  yearSelect.addEventListener('change', updateDays);
+  monthSelect.addEventListener('change', updateDays);
+  // 최초 로드시 일수 채우기
+  yearSelect.value = thisYear;
+  monthSelect.value = '01';
+  updateDays();
+
   // 긍정적 이모지 리스트
   const emojis = ['✨', '🌈', '😃', '🦄', '🍀', '🌟', '🧚‍♀️', '🪄', '☀️', '💫'];
 
@@ -18,11 +46,14 @@ document.addEventListener('DOMContentLoaded', function() {
   form.addEventListener('submit', async function(e) {
     e.preventDefault();
     const name = document.getElementById('name').value.trim();
-    const birth = document.getElementById('birth').value;
-    if (!name || !birth) {
+    const year = yearSelect.value;
+    const month = monthSelect.value;
+    const day = daySelect.value;
+    if (!name || !year || !month || !day) {
       showResult('이름과 생년월일을 모두 입력해주세요.');
       return;
     }
+    const birth = `${year}-${month}-${day}`;
     showResult('운세를 불러오는 중...');
 
     // Gemini API 연동 예시 (실제 배포시 보안상 별도 프록시 서버 필요)
