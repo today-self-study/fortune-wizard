@@ -162,29 +162,67 @@ button:hover {
 }
 
 @media (max-width: 600px) {
+  html, body {
+    font-size: 15px;
+  }
   .container {
-    max-width: 98vw;
-    padding: 12vw 3vw 6vw 3vw;
+    max-width: 100vw;
+    padding: 6vw 2vw 4vw 2vw;
+    border-radius: 12px;
+    margin: 4vw auto;
+    box-shadow: 0 2px 8px rgba(183,28,28,0.08);
   }
   h1 {
-    font-size: 1.3rem;
+    font-size: 1.15rem;
+    margin-bottom: 6px;
   }
-  .result-box {
+  .subtitle {
     font-size: 0.98rem;
-    padding: 12px 6px;
+    margin-bottom: 14px;
+  }
+  label {
+    font-size: 0.97rem;
+    margin-top: 10px;
+    margin-bottom: 4px;
+  }
+  input[type="text"],
+  .birth-selects select {
+    font-size: 0.97rem;
+    padding: 9px 8px;
+    border-radius: 7px;
+    margin-bottom: 10px;
+  }
+  button {
+    font-size: 1rem;
+    padding: 11px;
+    border-radius: 7px;
+    margin-top: 7px;
+    margin-bottom: 6px;
   }
   .form-block {
-    padding: 6vw 2vw 3vw 2vw;
-    margin-bottom: 3vw;
+    padding: 4vw 2vw 2vw 2vw;
+    margin-bottom: 2vw;
+    border-radius: 8px;
   }
   .form-block:last-child {
-    padding: 4vw 2vw 2vw 2vw;
+    padding: 2vw 2vw 1vw 2vw;
+  }
+  .result-box {
+    font-size: 0.97rem;
+    padding: 10px 5px;
+    border-radius: 8px;
+    margin-top: 16px;
+    min-height: 40px;
+    gap: 6px;
+  }
+  .result-emoji {
+    font-size: 1.3rem;
+    margin-right: 5px;
   }
   .birth-selects {
-    gap: 2vw;
+    gap: 1vw;
   }
-  .birth-selects select {
-    font-size: 0.95rem;
-    padding: 2vw 2vw;
+  .birth-label {
+    font-size: 0.97rem;
   }
 } 
