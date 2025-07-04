@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
     try {
       const prompt = `${name}(${birth})의 오늘의 운세를 재미있고 긍정적으로 3~4줄로 알려줘.`;
       // 실제 API 키와 엔드포인트는 별도 환경변수/프록시 서버에서 관리 필요
-      const apiKey = 'YOUR_GEMINI_API_KEY'; // 실제 배포시 노출 금지!
-      const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=' + apiKey, {
+      const apiKey = 'AIzaSyBsTJS9sDegG9G0XFHDgAHA8UB7vykzD48'; // 실제 배포시 노출 금지!
+      const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=' + apiKey, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
